@@ -1,4 +1,4 @@
-package example;
+package servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -34,6 +34,7 @@ public class UranaiServlet extends HttpServlet {
 		out.println("</head>");
 		out.println("<body>");
 		out.println("<p>" + today + "の運勢は【" + luck + "】です。</p>");
+		out.println("<p>今日も１日頑張ろう!</p>");
 		out.println("</body>");
 		out.println("</html>");
 
