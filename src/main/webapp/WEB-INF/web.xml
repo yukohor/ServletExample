@@ -29,4 +29,24 @@
     <servlet-name>FrormServlet</servlet-name>
     <url-pattern>/FrormServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FowardServlet</display-name>
+    <servlet-name>FowardServlet</servlet-name>
+    <servlet-class>servlet.FowardServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FowardServlet</servlet-name>
+    <url-pattern>/FowardServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RedirectServlet</display-name>
+    <servlet-name>RedirectServlet</servlet-name>
+    <servlet-class>servlet.RedirectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RedirectServlet</servlet-name>
+    <url-pattern>/RedirectServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
