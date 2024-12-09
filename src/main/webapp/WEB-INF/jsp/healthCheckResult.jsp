@@ -3,7 +3,7 @@
 <%@ page import="model.Health"%>
 <%
     //リクエストスコープに保存されたHealthインスタンス取得
-    Health health = (Health)request.getAttribute("health")
+    Health health = (Health)request.getAttribute("health");
     %>
 <!DOCTYPE html>
 <html>
@@ -20,6 +20,6 @@
 		<%= health.getBmi() %><br> 体型 :
 		<%= health.getBodyType() %>
 	</p>
-	<a href="HealthCheck">戻る</a>
+	<a href="HealthCheck2">戻る</a>
 </body>
 </html>

@@ -69,4 +69,24 @@
     <servlet-name>HealthCheck</servlet-name>
     <url-pattern>/HealthCheck</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FruitServlet</display-name>
+    <servlet-name>FruitServlet</servlet-name>
+    <servlet-class>servlet.FruitServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FruitServlet</servlet-name>
+    <url-pattern>/FruitServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RegisterUser</display-name>
+    <servlet-name>RegisterUser</servlet-name>
+    <servlet-class>servlet.RegisterUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterUser</servlet-name>
+    <url-pattern>/RegisterUser</url-pattern>
+  </servlet-mapping>
 </web-app>

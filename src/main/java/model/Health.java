@@ -27,14 +27,14 @@ public class Health implements Serializable {
 	}
 
 	public double getBmi() {
-		return bmi;
+		return this.bmi;
 	}
 
 	public void setBodyType(String bodyType) {
 		this.bodyType = bodyType;
 	}
 
-	public String GetBodyType() {
+	public String getBodyType() {
 		return this.bodyType;
 
 	}
