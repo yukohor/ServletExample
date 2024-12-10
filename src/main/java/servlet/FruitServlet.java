@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import ex.Fruit;
 import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -20,13 +21,20 @@ public class FruitServlet extends HttpServlet {
 		Fruit fruit = new Fruit("いちご",700);
 		
 		
+		ServletContext application = this.getServletContext();
+		application.setAttribute("fruit", fruit);
 		
-		
-		//fruitインスタンスをリクエストスコープに格納
+	
+	RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/ex/fruit.jsp");
+	dispatcher.forward(request,response);
+}
+}
+		/*
+		fruitインスタンスをリクエストスコープに格納
 		request.setAttribute("fruit",fruit);	
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/ex/fruit.jsp");
 		dispatcher.forward(request, response);
 	}
 
-}
+}*/
