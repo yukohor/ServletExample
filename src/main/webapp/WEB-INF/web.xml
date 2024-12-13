@@ -112,4 +112,13 @@
   <listener>
     <listener-class>listener.CounterListener</listener-class>
   </listener>
+  <filter>
+    <display-name>SetEncodinfFilter</display-name>
+    <filter-name>SetEncodinfFilter</filter-name>
+    <filter-class>filter.SetEncodinfFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>SetEncodinfFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
 </web-app>
