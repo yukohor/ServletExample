@@ -99,4 +99,17 @@
     <servlet-name>MinatoIndex</servlet-name>
     <url-pattern>/MinatoIndex</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CounterServlet</display-name>
+    <servlet-name>CounterServlet</servlet-name>
+    <servlet-class>servlet.CounterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CounterServlet</servlet-name>
+    <url-pattern>/CounterServlet</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>listener.CounterListener</listener-class>
+  </listener>
 </web-app>
