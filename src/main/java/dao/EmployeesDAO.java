@@ -50,4 +50,33 @@ public class EmployeesDAO {
 		return empList;
 	}
 
+	public boolean remove(String id) {
+		
+		//データーベース接続
+		try (Connection conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS)) {
+			String sql = "DELETE FROM EMPLOYEES WHERE ID=?";
+			PreparedStatement pStmt = conn.prepareStatement(sql);
+			pStmt.setString(1, id);
+			int result = pStmt.executeUpdate();
+			if(result != 1) {
+				return false;
+			
+			
+			/*
+			 * 私の間違った答え
+			 String sql = "INSERT INTO MUTTERS(ID) VALUES(?,?)";
+			PreparedStatement pStmt = conn.prepareStatement(sql);
+
+			ResultSet rs = pStmt.executeQuery();
+			String id = rs.getString("ID");
+
+			if (id == null) {
+				return false;  */
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
 }
